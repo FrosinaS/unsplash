@@ -20,7 +20,6 @@ class UnsplashAuthorizationService implements UnsplashAuthorizationServiceInterf
     public function authorize($scopes)
     {
         $url = $this->composeAuthorizationUrl($scopes);
-        Session::put('scopes', $scopes);
 
         return Redirect::away($url);
     }
@@ -56,7 +55,7 @@ class UnsplashAuthorizationService implements UnsplashAuthorizationServiceInterf
     private function getAuthorizationParameters($scopes)
     {
         return '?client_id=' . $this->getClientId()
-            . '&redirect_uri=' . $this->getRedirectUrl() . '?scopes=' . json_encode($scopes)
+            . '&redirect_uri=' . $this->getRedirectUrl() . '?scopes=' . json_encode($scopes).'&headed='. session('intended')
             . '&response_type=code'
             . '&scope=' . $this->prepareScopes($scopes);
     }
