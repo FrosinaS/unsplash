@@ -24,7 +24,7 @@
             "src/Services/",
             "src/Models/",
             "src/Traits/",
-            "src/UnsplashController"
+            "src/UnsplashController.php"
         ]
     },
     "license": "Apache-2.0",
