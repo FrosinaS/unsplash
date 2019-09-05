@@ -4,6 +4,7 @@
 namespace Frosinas\Unsplash\Models;
 
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class AccessToken extends Model
