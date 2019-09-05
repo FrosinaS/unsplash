@@ -24,8 +24,5 @@
             "Frosinas/Unsplash"
         ]
     },
-    "license": "Apache-2.0",
-    "require": {
-        "frosinas/unsplash": "dev-master"
-    }
+    "license": "Apache-2.0"
 }
