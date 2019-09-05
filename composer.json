@@ -1,0 +1,12 @@
+{
+    "name": "frosinas/unsplash-sdk",
+    "description": "Sdk for making unsplash calls",
+    "type": "library",
+    "authors": [
+        {
+            "name": "f.stamatoska",
+            "email": "f.stamatoska@blexr.com"
+        }
+    ],
+    "require": {}
+}
