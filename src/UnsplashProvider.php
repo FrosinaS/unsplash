@@ -2,7 +2,7 @@
 
 namespace Frosinas\Unsplash;
 
-use Frosinas\Unsplash\Controllers\UnsplashController;
+use Frosinas\Unsplash\UnsplashController;
 use Frosinas\Unsplash\Services\TokenService;
 use Frosinas\Unsplash\Services\TokenServiceInterface;
 use Frosinas\Unsplash\Services\UnsplashAuthenticationService;

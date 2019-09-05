@@ -1,3 +1,3 @@
 <?php
 
-Route::get('/api/unsplash/authorization', 'UnsplashController@authorization');
+Route::get('/api/unsplash/authorization', 'Frosinas/Unsplash/UnsplashController@authorization');

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Frosinas\Unsplash\Controllers;
+namespace Frosinas\Unsplash;
 
 
 use App\Http\Controllers\Controller;
