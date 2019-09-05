@@ -27,7 +27,7 @@
       "src/UnsplashController.php"
     ],
     "files": [
-      "helpers.php"
+      "src/helpers.php"
     ]
   },
   "license": "Apache-2.0",
