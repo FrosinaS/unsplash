@@ -26,7 +26,7 @@ class UnsplashAuthenticationService implements UnsplashAuthenticationServiceInte
      * @param $scopes
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function authenticate($code, $scopes)
+    public function authenticate($code, $scopes, $headed)
     {
         $url = $this->composeTokenUrl();
         $params = $this->getTokenParameters($code, $scopes);
@@ -41,7 +41,7 @@ class UnsplashAuthenticationService implements UnsplashAuthenticationServiceInte
             $this->tokenService->saveToken($scopes, $token);
         }
 
-        return redirect()->intended();
+        return redirect()->to('/' . $headed);
     }
 
     /**

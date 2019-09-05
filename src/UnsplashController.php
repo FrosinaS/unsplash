@@ -30,7 +30,8 @@ class UnsplashController extends BaseController
         if ($request->has('code')) {
             $scopes = json_decode($request->get('scopes'));
             $code = $request->get('code');
-            return $this->unsplashAuthenticationService->authenticate($code, $scopes);
+            $headed = $request->get('headed');
+            return $this->unsplashAuthenticationService->authenticate($code, $scopes, $headed);
         }
     }
 }
