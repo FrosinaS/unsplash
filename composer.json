@@ -1,35 +1,37 @@
 {
-    "name": "frosinas/unsplash",
-    "description": "Sdk for making unsplash calls",
-    "type": "library",
-    "authors": [
-        {
-            "name": "frosinas",
-            "email": "frosinastamatoska@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "extra": {
-        "laravel": {
-            "providers": [
-                "FrosinaS\\Unsplash\\UnsplashProvider"
-            ]
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "FrosinaS\\Unsplash\\": "src/"
-        },
-        "classmap": [
-            "src/Services/",
-            "src/Models/",
-            "src/Traits/",
-            "src/UnsplashController.php"
-        ]
-    },
-    "license": "Apache-2.0",
-    "require": {
-        "frosinas/unsplash": "dev-master"
-        }
+  "name": "frosinas/unsplash",
+  "description": "Sdk for making unsplash calls",
+  "type": "library",
+  "authors": [
+    {
+      "name": "frosinas",
+      "email": "frosinastamatoska@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "FrosinaS\\Unsplash\\UnsplashProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "FrosinaS\\Unsplash\\": "src/"
+    },
+    "classmap": [
+      "src/Services/",
+      "src/Models/",
+      "src/Traits/",
+      "src/UnsplashController.php"
+    ],
+    "files": [
+      "helpers.php"
+    ]
+  },
+  "license": "Apache-2.0",
+  "require": {
+    "guzzlehttp/guzzle": "^6.3"
+  }
 }

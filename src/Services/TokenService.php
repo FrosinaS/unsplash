@@ -17,16 +17,18 @@ class TokenService implements TokenServiceInterface
      */
     public function getTokenByScope($scope)
     {
-        $user = auth()->user();
+        $user = getLoggedInUser();
 
-        $accessToken = $user->accessTokens->filter(function ($token) use ($scope) {
-            $result = $token->scopes->first(function ($tokenScope) use ($scope) {
-                return $tokenScope->scope === $scope;
-            });
-            if($result){
-                return $token;
-            }
-        })->first();
+        if ($user->accessTokens) {
+            $accessToken = $user->accessTokens->filter(function ($token) use ($scope) {
+                $result = $token->scopes->first(function ($tokenScope) use ($scope) {
+                    return $tokenScope->scope === $scope;
+                });
+                if ($result) {
+                    return $token;
+                }
+            })->first();
+        }
 
         return $accessToken->access_token ?? false;
     }
@@ -38,7 +40,8 @@ class TokenService implements TokenServiceInterface
      */
     public function saveToken($scopes, $token)
     {
-        $user = auth()->user();
+        $user = getLoggedInUser();
+
         $newToken = AccessToken::create([
             'access_token' => $token
         ]);
