@@ -21,9 +21,9 @@
             "FrosinaS\\Unsplash\\": "src/"
         },
         "classmap": [
-            "Services/",
-            "Models/",
-            "Traits/"
+            "src/Services/",
+            "src/Models/",
+            "src/Traits/"
         ]
     },
     "license": "Apache-2.0",
