@@ -1,5 +1,5 @@
 {
-    "name": "frosinas/unsplash-sdk",
+    "name": "frosinas/unsplash",
     "description": "Sdk for making unsplash calls",
     "type": "library",
     "authors": [
@@ -9,5 +9,16 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FrosinaS\\Unsplash\\UnsplashProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "FrosinaS\\Unsplash\\": "src/"
+        }
+    }
 }
