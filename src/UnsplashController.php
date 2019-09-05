@@ -4,12 +4,12 @@
 namespace Frosinas\Unsplash;
 
 
-use App\Http\Controllers\Controller;
 use Frosinas\Unsplash\Services\UnsplashAuthenticationServiceInterface;
 use Frosinas\Unsplash\Services\UnsplashSdk;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller as BaseController;
 
-class UnsplashController extends Controller
+class UnsplashController extends BaseController
 {
     private $sdk;
 
