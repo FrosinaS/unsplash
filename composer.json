@@ -8,5 +8,6 @@
             "email": "f.stamatoska@blexr.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {}
 }
