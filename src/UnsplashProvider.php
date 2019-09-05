@@ -23,10 +23,8 @@ class UnsplashProvider extends ServiceProvider
         $this->app->bind(UnsplashAuthenticationServiceInterface::class, UnsplashAuthenticationService::class);
         $this->app->bind(UnsplashAuthorizationServiceInterface::class, UnsplashAuthorizationService::class);
         $this->app->bind(TokenServiceInterface::class, TokenService::class);
+        $this->app->make(UnsplashController::class);
 
-        $this->mergeConfigFrom(
-            __DIR__.'/config/unsplash.php', 'unsplash'
-        );
     }
 
     /**
@@ -36,10 +34,10 @@ class UnsplashProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__.'/routes.php');
-        $this->loadMigrationsFrom(__DIR__.'/migrations');
+        $this->loadRoutesFrom(__DIR__ . '/routes.php');
+        $this->loadMigrationsFrom(__DIR__ . '/migrations');
         $this->publishes([
-            __DIR__.'/config/unsplash.php' => config_path('unsplash.php'),
+            __DIR__ . '/unsplash.php' => config_path('unsplash.php'),
         ]);
     }
 }
