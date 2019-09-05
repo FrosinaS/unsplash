@@ -23,7 +23,8 @@
         "classmap": [
             "src/Services/",
             "src/Models/",
-            "src/Traits/"
+            "src/Traits/",
+            "src/UnsplashController"
         ]
     },
     "license": "Apache-2.0",
