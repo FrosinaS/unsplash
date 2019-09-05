@@ -20,8 +20,6 @@ class UnsplashProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make(UnsplashController::class);
-
         $this->app->bind(UnsplashAuthenticationServiceInterface::class, UnsplashAuthenticationService::class);
         $this->app->bind(UnsplashAuthorizationServiceInterface::class, UnsplashAuthorizationService::class);
         $this->app->bind(TokenServiceInterface::class, TokenService::class);
